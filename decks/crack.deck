@@ -1,0 +1,10 @@
+; punched by earthenware 0.1.0 from crack.asm
+; B|OPCD|OPERAND   (O = hole, . = blank)
+.|...O|....OOOO
+.|.O.O|.....O.O   ; conventional: 3
+.|.OO.|........
+.|...O|....OOOO
+O|.O.O|.....OOO   ; 7 is a unit (7*13 ≡ 1): 15*13 = 195 ≡ 15
+O|.OO.|........
+O|.O.O|.....O.O   ; 5 is not a unit -> CRACK
+.|....|........

@@ -1,0 +1,25 @@
+{
+  "name": "earthenware",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Earthenware: a sandboxed punch-card computer where a bypass hole reroutes cards through Z/30 arithmetic, so 5*9=15.",
+  "license": "MIT",
+  "author": "Joshua Almeida",
+  "type": "commonjs",
+  "bin": { "earthenware": "dist/cli.js" },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node scripts/clean.js dist && tsc -p tsconfig.json && node scripts/chmod-bin.js",
+    "build:test": "node scripts/clean.js build-test && tsc -p tsconfig.test.json",
+    "test": "npm run build && npm run build:test && node --test build-test/test/*.test.js",
+    "typecheck": "tsc -p tsconfig.test.json --noEmit",
+    "demo": "node dist/cli.js run decks/five-nines.deck",
+    "tripwire": "node scripts/tripwire.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.0",
+    "typescript": "^5.4.0"
+  }
+}

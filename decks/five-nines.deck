@@ -1,0 +1,11 @@
+; punched by earthenware 0.1.0 from five-nines.asm
+; B|OPCD|OPERAND   (O = hole, . = blank)
+.|...O|.....O.O   ; acc = 5
+.|.O..|....O..O   ; conventional ALU
+.|.OO.|........   ; -> 45
+.|...O|.....O.O   ; acc = 5
+O|.O..|....O..O   ; bypass hole punched: routed through the kiln
+O|.OO.|........   ; -> 15
+O|OOO.|....OOOO   ; does 5*9 equal 15 in Earthenware?  acc = 1
+.|.OO.|........   ; -> 1
+.|....|........

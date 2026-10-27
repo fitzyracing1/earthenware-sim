@@ -1,0 +1,6 @@
+; punched by earthenware 0.1.0 from bypass.asm
+; B|OPCD|OPERAND   (O = hole, . = blank)
+.|...O|.....O.O
+O|.O..|....O..O
+.|.OO.|........   ; -> 15
+.|....|........
